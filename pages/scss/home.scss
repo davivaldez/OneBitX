@@ -1,0 +1,145 @@
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+header {
+  font-size: 14px;
+  &.container-header {
+    @include backgroundImage("../../images/home/01.jpg");
+  }
+
+  nav {
+    background-color: transparent;
+    .img-logo {
+      width: 250px;
+    }
+  }
+}
+
+section {
+  position: relative;
+  &.section-title {
+    height: 750px;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 150px;
+    bottom: 20%;
+  }
+}
+
+.container-section1 {
+  @include backgroundImage("../../images/home/03.jpg");
+}
+
+.paragraph-section1 {
+  max-width: 40%;
+}
+
+.container-section2 {
+  @include backgroundImage("../../images/home/02.gif");
+}
+
+.paragraph-section2 {
+  max-width: 45%;
+}
+
+.container-section3 {
+  @include backgroundImage("../../images/home/04.jpg");
+}
+
+.paragraph-section3 {
+  max-width: 50%;
+}
+
+footer {
+  p {
+    color: $color-footer;
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $color-footer-hover;
+    }
+  }
+}
+
+@media (max-width: 995px) {
+  .paragraph-section2 {
+    max-width: 60%;
+  }
+
+  .paragraph-section3 {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .paragraph-section1 {
+    max-width: 80%;
+  }
+
+  .paragraph-section2 {
+    max-width: 70%;
+  }
+
+  .paragraph-section3 {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 460px) {
+  .paragraph-section2 {
+    max-width: 100%;
+  }
+
+  .paragraph-section3 {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    nav {
+      .img-logo {
+        width: 180px;
+      }
+    }
+  }
+
+  .paragraph-section1 {
+    max-width: 100%;
+  }
+
+  .paragraph-section3 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  header {
+    nav {
+      .img-logo {
+        width: 150px;
+      }
+    }
+  }
+}
