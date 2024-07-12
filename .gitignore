@@ -3,3 +3,6 @@
 
 # Source map files
 *.map
+
+# Generated CSS files
+css/
