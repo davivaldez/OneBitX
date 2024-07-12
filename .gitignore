@@ -1,0 +1,5 @@
+# Sass cache
+.sass-cache/
+
+# Source map files
+*.map
